@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deportes</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: url('imagenes/fondo2.jpg') no-repeat center center fixed; background-size: cover;color: #ffffff; margin: 0; padding: 0;}
+        .container { display: flex; flex-wrap: wrap; }
+        .menu { width: 100%; max-width: 250px; border-right: 2px solid #555; padding: 10px; background-color: #2b2b2b; }
+        .menu h3, .menu ul { color: #ffffff; }
+        .menu ul { list-style: none; padding: 0; }
+        .menu ul li a { color: #ffffff; text-decoration: none; display: block; padding: 5px; }
+        .menu ul li a:hover { background-color: #444; }
+        .content { flex-grow: 1; padding: 10px; min-width: 300px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: #333; }
+        th, td { border: 1px solid #777; padding: 8px; text-align: center; }
+        th { background-color: #444; }
+        p { font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px; }
+        .btn-reglas {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #ff9800;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn-reglas:hover { background-color: #e68900; transform: scale(1.05); }
+        .reglas { display: none; background-color: #2b2b2b; padding: 15px; margin-top: 10px; border-radius: 5px; }
+        .boton {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            color: white;
+            background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .boton:hover { transform: scale(1.1); box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); }
+        .boton-inicio { background: linear-gradient(90deg, #00c6ff, #0072ff); }
+        @media (max-width: 768px) {
+            .container { flex-direction: column; align-items: center; }
+            .menu { width: 100%; max-width: none; border-right: none; border-bottom: 2px solid #555; }
+            .content { width: 100%; }
+            .boton { font-size: 16px; padding: 8px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <button class="boton boton-inicio" onclick="window.location.href='index.html'">Inicio</button>
+    <h1>Gestión de Deportes</h1>
+    <div class="container">
+        <div class="menu">
+            <h3>Deportes</h3>
+            <ul>
+                <li><a href="#" onclick="cargarDeporte('Fútbol Sala')">Fútbol Sala</a></li>
+                <li><a href="#" onclick="cargarDeporte('Baloncesto')">Baloncesto</a></li>
+                <li><a href="#" onclick="cargarDeporte('Voleibol')">Voleibol</a></li>
+                <li><a href="#" onclick="cargarDeporte('Natación')">Natación</a></li>
+                <li><a href="#" onclick="cargarDeporte('Tenis de Mesa')">Tenis de Mesa</a></li>
+                <li><a href="#" onclick="cargarDeporte('Atletismo')">Atletismo</a></li>
+                <li><a href="#" onclick="cargarDeporte('Ajedrez')">Ajedrez</a></li>
+                <li><a href="#" onclick="cargarDeporte('Ciclismo')">Ciclismo</a></li>
+            </ul>
+        </div>
+        <div class="content" id="content">
+            <h2>Seleccione un deporte</h2>
+            <p>Aquí aparecerán los detalles de los partidos, resultados y estadísticas.</p>
+        </div>
+    </div>
+    <script>
+        
+        function cargarDeporte(deporte) {
+            let contenido = `<h2>${deporte}</h2>`;
+            if (deporte === 'Fútbol Sala' ) {
+                contenido += `
+                <button class="boton" onclick="window.location.href='Reglas futsal.html'">Reglas</button>
+                    <h3>Próximos partidos</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Género</th>
+                        </tr>
+                        <tr>
+                            <td>17/02/2025</td>
+                            <td>10A</td>
+                            <td>10C</td>
+                            <td>Masculino</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Género</th>
+                        </tr>
+                        <tr>
+                            <td>18/02/2025</td>
+                            <td>10B</td>
+                            <td>9A</td>
+                            <td>Femenino</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Género</th>
+                        </tr>
+                        <tr>
+                            <td>19/02/2025</td>
+                            <td>11B</td>
+                            <td>10B</td>
+                            <td>Masculino</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Género</th>
+                        </tr>
+                        <tr>
+                            <td>20/02/2025</td>
+                            <td>9B</td>
+                            <td>10C</td>
+                            <td>Femenino</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Género</th>
+                        </tr>
+                        <tr>
+                            <td>21/02/2025</td>
+                            <td>9B</td>
+                            <td>9C</td>
+                            <td>Masculino</td>
+                        </tr>
+                    </table>
+                    <h3>Resultados de partidos (Primera semana)</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Marcador</th>
+                            <th>Ganador</th>
+                            <th>J. Destacado</th>
+                        </tr>
+                        <tr>
+                            <td>17/02/2025</td>
+                            <td>10A</td>
+                            <td>10C</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>
+                    
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Marcador</th>
+                            <th>Ganador</th>
+                            <th>J. Destacado</th>
+                        </tr>
+                        <tr>
+                            <td>18/02/2025</td>
+                            <td>10B</td>
+                            <td>9A</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Marcador</th>
+                            <th>Ganador</th>
+                            <th>J. Destacado</th>
+                        </tr>
+                        <tr>
+                            <td>19/02/2025</td>
+                            <td>11B</td>
+                            <td>10B</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Marcador</th>
+                            <th>Ganador</th>
+                            <th>J. Destacado</th>
+                        </tr>
+                        <tr>
+                            <td>20/02/2025</td>
+                            <td>9B</td>
+                            <td>10C</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Marcador</th>
+                            <th>Ganador</th>
+                            <th>J. Destacado</th>
+                        </tr>
+                        <tr>
+                            <td>21/02/2025</td>
+                            <td>9B</td>
+                            <td>9C</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>`;
+            }else if (deporte === 'Baloncesto') {
+                contenido += `
+                <button class="boton" onclick="window.location.href='reglas baloncesto.html'">Reglas</button>    
+                <h3>Próximos partidos</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Género</th>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>Mixto</td>
+                        </tr>
+                    </table>
+                    <h3>Resultados de partidos</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Marcador</th>
+                            <th>Ganador</th>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>`;
+            }else if (deporte === 'Voleibol') {
+                contenido += `
+                <button class="boton" onclick="window.location.href='reglas voleibol.html'">Reglas</button>    
+                <h3>Próximos partidos</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Género</th>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>Mixto</td>
+                        </tr>
+                    </table>
+                    <h3>Resultados de partidos</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo</th>
+                            <th>Jugador</th>
+                            <th>Goles/Puntos</th>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>`;
+            } else if (deporte === 'Natación' || deporte === 'Atletismo' || deporte === 'Ciclismo') {
+                contenido += `
+                <button class="boton" onclick="window.location.href='reglas natacion.html'">Reglas</button>    
+                <h3>Eventos próximos</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Competidor</th>
+                            <th>Prueba</th>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>
+                    <h3>Resultados</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Competidor</th>
+                            <th>Tiempo/Marca</th>
+                            <th>Posición</th>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>`;
+            } else if (deporte === 'Ajedrez' || deporte === 'Tenis de Mesa') {
+                contenido += `
+                <button class="boton" onclick="window.location.href='reglas ajedrez.html'">Reglas</button>    
+                <h3>Próximos enfrentamientos</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Jugador 1</th>
+                            <th>Jugador 2</th>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>
+                    <h3>Resultados</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Jugador 1</th>
+                            <th>Jugador 2</th>
+                            <th>Resultado</th>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                    </table>`;
+            }
+            document.getElementById("content").innerHTML = contenido;
+
+        
+        }
+    </script>
+</body>
+</html>

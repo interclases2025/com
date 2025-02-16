@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción Interclases 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.8), rgba(255, 69, 0, 0.8));
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+            animation: slideIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffdd57;
+            margin-bottom: 10px;
+        }
+        p, ul {
+            font-size: 18px;
+            font-weight: 300;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 20px;
+            color: #0a0a0a;
+            background: #ffdd57;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .button:hover {
+            background: #ffd700;
+            transform: scale(1.1);
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Campeonato Interclases 2025</h1>
+        <p>Demuestra tu talento en las diferentes disciplinas deportivas!</p>
+        <h2>Detalles de Inscripción</h2>
+        <p><strong>Fechas:</strong> Del 1 al 5 de febrero de 2025</p>
+        <p><strong>Costo:</strong> $450.000 por equipo</p>
+        <p><strong>Pago Fraccionado:</strong></p>
+        <ul>
+            <li>34% antes del 5 de febrero</li>
+            <li>34% antes del 22 de abril</li>
+            <li>32% antes del 10 de julio</li>
+        </ul>
+        <p><strong>Requisitos:</strong></p>
+        <ul>
+            <li>Ministro y viceministro deportivo por equipo</li>
+            <li>Carnet de seguridad social vigente</li>
+            <li>Uniforme (mínimo camiseta)</li>
+        </ul>
+        <h2>Disciplinas Disponibles</h2>
+        <p>Ajedrez, Atletismo, Baloncesto, Ciclismo, Danza, Fútbol Sala, Natación, Tenis de Mesa, Voleibol.</p>
+    </div>
+</body>
+</html>

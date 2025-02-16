@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida a los Intercolegiados</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            background: url('imagenes/fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .banner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(51, 106, 161, 0.8);
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        .banner h1 {
+            font-size: 32px;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+        p {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 18px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .buttons a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .buttons a:hover {
+            background-color: #34495e;
+            transform: scale(1.05);
+        }
+        .como-funciona, .redes-sociales {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0);
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .redes-sociales img {
+            width: 50px;
+            margin: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .redes-sociales img:hover {
+            transform: scale(1.1);
+        }
+        .autor {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.05);
+            font-size: 16px;
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Interclases 2025</h1>
+        <img src="imagenes/logo.png" alt="Logo Intercolegiados" class="logo">
+    </div>
+    <p>Los Intercolegiados del Colegio Comercial del Norte son una competencia deportiva en la que los distintos salones participarán en una variedad de deportes como fútbol sala, baloncesto, voleibol, atletismo, ciclismo, tenis de mesa y natación. Este evento promueve la sana competencia, el trabajo en equipo y la diversión entre los estudiantes.</p>
+    <div class="buttons">
+        <a href="deportes.html">Ver Deportes</a>
+        <a href="reglamento.html">Reglamento</a>
+        <a href="inscripcion.html">Inscripción</a>
+    </div>
+    <div class="como-funciona">
+        <h2>¿Cómo funciona?</h2>
+        <p>El campeonato se evaluará de acuerdo con la disciplina deportiva:</p>
+        <ul>
+            <li><strong>Fútbol Sala:</strong> Se jugarán dos tiempos de 20 minutos. Cada victoria otorga 3 puntos, empate 1 punto.</li>
+            <br>
+            <li><strong>Baloncesto:</strong> Cuatro tiempos de 10 minutos. Cada partido ganado otorga 3 puntos.</li>
+            <br>
+            <li><strong>Voleibol:</strong> Se juegan dos sets a 21 puntos, en caso de empate se evalúa el equipo con más puntos totales.</li>
+            <br>
+            <li><strong>Atletismo:</strong> Se toma el mejor tiempo por curso. Los cuatro mejores tiempos recibirán puntos.</li>
+            <br>
+            <li><strong>Ciclismo:</strong> Competencia de vueltas en pista, el mejor tiempo obtiene el puntaje mayor.</li>
+            <br>
+            <li><strong>Natación:</strong> Pruebas de 50m y 4x25m con puntajes según la posición final.</li>
+            <br>
+            <li><strong>Tenis de Mesa:</strong> Se juegan partidos al mejor de 5 sets.</li>
+        </ul>
+        </ul>
+    </div>
+    <div class="redes-sociales">
+        <h2>Síguenos en nuestra red social</h2>
+        <a href="https://www.facebook.com/iecomercialdelnorte"><img src="imagenes/facebook.png" alt="Facebook"></a>
+    </div>
+    <div class="autor">
+        <p><strong>Autor:</strong> Joseph Rodríguez Maca</p>
+        <p>Estudiante grado 11A, Promoción 2025</p>
+        <p>Presidente del Ministerio de Deportes y encargado de las Interclases</p>
+        <p>Organizado por el profesor Ariel Pino</p>
+    </div>
+</body>
+</html>

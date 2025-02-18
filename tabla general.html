@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla General</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #121212; 
+            color: white;
+        }
+        table { 
+            width: 60%; 
+            margin: 20px auto; 
+            border-collapse: collapse; 
+            background-color: #1e1e1e; 
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td { 
+            border: 1px solid #333; 
+            padding: 10px; 
+            text-align: center; 
+        }
+        th { 
+            background-color: #4CAF50; 
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Tabla General</h2>
+    <table id="tablaGeneral">
+        <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Equipo</th>
+                <th>Puntaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas dinámicas -->
+        </tbody>
+    </table>
+
+    <h2>Color de Equipamiento</h2>
+    <table id="colorEquipamiento">
+        <thead>
+            <tr>
+                <th>Equipo</th>
+                <th>Suscripción Pagada</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>9A</td><td>$150.000</td><td>Rosado</td></tr>
+            <tr><td>9B</td><td>$130.000</td><td>Combinado</td></tr>
+            <tr><td>9C</td><td>$150.000</td><td>Vino Tinto</td></tr>
+            <tr><td>10A</td><td>$150.000</td><td>Blanco</td></tr>
+            <tr><td>10B</td><td>$150.000</td><td>Azul oscuro</td></tr>
+            <tr><td>10C</td><td>$150.000</td><td>Verde Oscuro</td></tr>
+            <tr><td>11A</td><td>$205.500</td><td>Gris</td></tr>
+            <tr><td>11B</td><td>$153.000</td><td>Celeste claro</td></tr>
+            <tr><td>Profesores</td><td>$75.000</td><td>Amarillo</td></tr>
+            <tr><td>Total</td><td>$1.238.500</td><td>X</td></tr>
+        </tbody>
+    </table>
+
+    <script>
+        let equipos = [
+            { nombre: "9A", puntaje: 0 },
+            { nombre: "9B", puntaje: 0 },
+            { nombre: "9C", puntaje: 3 },
+            { nombre: "10A", puntaje: 0 },
+            { nombre: "10B", puntaje: 0 },
+            { nombre: "10C", puntaje: 0 },
+            { nombre: "11A", puntaje: 0 },
+            { nombre: "11B", puntaje: 0 },
+            { nombre: "Profesores", puntaje: 0 }
+        ];
+
+        equipos.sort((a, b) => b.puntaje - a.puntaje);
+
+        let tbody = document.querySelector("#tablaGeneral tbody");
+        equipos.forEach((equipo, index) => {
+            let fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${equipo.nombre}</td>
+                <td>${equipo.puntaje}</td>
+            `;
+            tbody.appendChild(fila);
+        });
+    </script>
+</body>
+</html>

@@ -38,6 +38,8 @@
                 <th>Posición</th>
                 <th>Equipo</th>
                 <th>Puntaje</th>
+                <th>Goles a Favor</th>
+                <th>Goles en Contra</th>
             </tr>
         </thead>
         <tbody>
@@ -56,30 +58,42 @@
         </thead>
         <tbody>
             <tr><td>9A</td><td>$150.000</td><td>Rosado</td></tr>
-            <tr><td>9B</td><td>$150.000</td><td>Combinado</td></tr>
+            <tr><td>9B</td><td>$130.000</td><td>Combinado</td></tr>
             <tr><td>9C</td><td>$150.000</td><td>Vino Tinto</td></tr>
             <tr><td>10A</td><td>$150.000</td><td>Blanco</td></tr>
             <tr><td>10B</td><td>$150.000</td><td>Azul oscuro</td></tr>
             <tr><td>10C</td><td>$150.000</td><td>Verde Oscuro</td></tr>
             <tr><td>11A</td><td>$205.500</td><td>Gris</td></tr>
             <tr><td>11B</td><td>$153.000</td><td>Celeste claro</td></tr>
-            <tr><td>Total</td><td>$1.183.500</td><td>X</td></tr>
+            <tr><td>Total</td><td>$1.238.500</td><td>X</td></tr>
         </tbody>
     </table>
 
     <script>
         let equipos = [
-            { nombre: "9A", puntaje: 1 },
-            { nombre: "9B", puntaje: 4 },
-            { nombre: "9C", puntaje: 0 },
-            { nombre: "10A", puntaje: 1 },
-            { nombre: "10B", puntaje: 6 },
-            { nombre: "10C", puntaje: 7 },
-            { nombre: "11A", puntaje: 3 },
-            { nombre: "11B", puntaje: 0 },
+            { nombre: "9A", puntaje: 1, golesFavor: 1, golesContra: 1 },
+            { nombre: "9B", puntaje: 3, golesFavor: 8, golesContra: 0 },
+            { nombre: "9C", puntaje: 0, golesFavor: 4, golesContra: 15 },
+            { nombre: "10A", puntaje: 1, golesFavor: 5, golesContra: 18 },
+            { nombre: "10B", puntaje: 7, golesFavor: 16, golesContra: 4 },
+            { nombre: "10C", puntaje: 7, golesFavor: 6, golesContra: 4 },
+            { nombre: "11A", puntaje: 3, golesFavor: 7, golesContra: 4 },
+            { nombre: "11B", puntaje: 0, golesFavor: 2, golesContra: 3 },
         ];
 
-        equipos.sort((a, b) => b.puntaje - a.puntaje);
+        // Ordenamiento personalizado
+        equipos.sort((a, b) => {
+            // Primero ordena por puntaje (descendente)
+            if (b.puntaje !== a.puntaje) {
+                return b.puntaje - a.puntaje;
+            }
+            // Si el puntaje es igual, ordena por goles a favor (descendente)
+            if (b.golesFavor !== a.golesFavor) {
+                return b.golesFavor - a.golesFavor;
+            }
+            // Si puntaje y goles a favor son iguales, ordena por goles en contra (ascendente)
+            return a.golesContra - b.golesContra;
+        });
 
         let tbody = document.querySelector("#tablaGeneral tbody");
         equipos.forEach((equipo, index) => {
@@ -88,6 +102,8 @@
                 <td>${index + 1}</td>
                 <td>${equipo.nombre}</td>
                 <td>${equipo.puntaje}</td>
+                <td>${equipo.golesFavor}</td>
+                <td>${equipo.golesContra}</td>
             `;
             tbody.appendChild(fila);
         });

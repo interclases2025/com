@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas Generales</title>
+    <link rel="icon" href="imagenes/tabla.ico">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #121212; 
+            color: white;
+        }
+        table { 
+            width: 60%; 
+            margin: 20px auto; 
+            border-collapse: collapse; 
+            background-color: #1e1e1e; 
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td { 
+            border: 1px solid #333; 
+            padding: 10px; 
+            text-align: center; 
+        }
+        th { 
+            background-color: #4CAF50; 
+            color: white; 
+        }
+        .eliminado {
+            background-color: #ff4444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h3>Ultima actualizacion 18/03/2025</h3>
+    <h2>Tabla General - Masculino</h2>
+    <table id="tablaMasculino">
+        <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Equipo</th>
+                <th>Puntaje</th>
+                <th>Goles a Favor</th>
+                <th>Goles en Contra</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas dinámicas -->
+        </tbody>
+    </table>
+
+    <h2>Tabla General - Femenino</h2>
+    <table id="tablaFemenino">
+        <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Equipo</th>
+                <th>Puntaje</th>
+                <th>Goles a Favor</th>
+                <th>Goles en Contra</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas dinámicas -->
+        </tbody>
+    </table>
+
+    <script>
+        // Datos para masculino
+        let equiposMasculino = [
+            { nombre: "9A", puntaje: 1, golesFavor: 3, golesContra: 7 },
+            { nombre: "9B", puntaje: 7, golesFavor: 12, golesContra: 3 },
+            { nombre: "9C", puntaje: 0, golesFavor: 2, golesContra: 15 },
+            { nombre: "10A", puntaje: 0, golesFavor: 2, golesContra: 18, eliminado: true },
+            { nombre: "10B", puntaje: 6, golesFavor: 15, golesContra: 3 },
+            { nombre: "10C", puntaje: 3, golesFavor: 3, golesContra: 9 },
+            { nombre: "11A", puntaje: 6, golesFavor: 13, golesContra: 4 },
+            { nombre: "11B", puntaje: 3, golesFavor: 10, golesContra: 3 },
+        ];
+
+        // Datos para femenino
+        let equiposFemenino = [
+            { nombre: "9A", puntaje: 1, golesFavor: 1, golesContra: 1 },
+            { nombre: "9B", puntaje: 0, golesFavor: 0, golesContra: 0, eliminado: true },
+            { nombre: "9C", puntaje: 6, golesFavor: 13, golesContra: 7 },
+            { nombre: "10A", puntaje: 4, golesFavor: 9, golesContra: 8 },
+            { nombre: "10B", puntaje: 1, golesFavor: 2, golesContra: 4 },
+            { nombre: "10C", puntaje: 4, golesFavor: 3, golesContra: 5 },
+            { nombre: "11A", puntaje: 6, golesFavor: 11, golesContra: 7 },
+            { nombre: "11B", puntaje: 0, golesFavor: 0, golesContra: 7 },
+        ];
+
+        // Función de ordenamiento
+        function ordenarEquipos(equipos) {
+            return equipos.sort((a, b) => {
+                if (a.eliminado) return 1;  // Los eliminados van al final
+                if (b.eliminado) return -1;
+                if (b.puntaje !== a.puntaje) return b.puntaje - a.puntaje;
+                if (b.golesFavor !== a.golesFavor) return b.golesFavor - a.golesFavor;
+                return a.golesContra - b.golesContra;
+            });
+        }
+
+        // Función para generar tabla
+        function generarTabla(equipos, tablaId) {
+            let tbody = document.querySelector(`#${tablaId} tbody`);
+            equipos.forEach((equipo, index) => {
+                let fila = document.createElement("tr");
+                if (equipo.eliminado) {
+                    fila.classList.add("eliminado");
+                    fila.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td>${equipo.nombre} (Eliminado)</td>
+                        <td>${equipo.puntaje}</td>
+                        <td>${equipo.golesFavor}</td>
+                        <td>${equipo.golesContra}</td>
+                    `;
+                } else {
+                    fila.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td>${equipo.nombre}</td>
+                        <td>${equipo.puntaje}</td>
+                        <td>${equipo.golesFavor}</td>
+                        <td>${equipo.golesContra}</td>
+                    `;
+                }
+                tbody.appendChild(fila);
+            });
+        }
+
+        // Generar ambas tablas
+        generarTabla(ordenarEquipos(equiposMasculino), "tablaMasculino");
+        generarTabla(ordenarEquipos(equiposFemenino), "tablaFemenino");
+    </script>
+</body>
+</html>

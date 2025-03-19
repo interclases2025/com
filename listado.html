@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Estudiantes - Grados 7 al 10</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 1.8em;
+            margin-top: 40px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #ecf0f1;
+            transition: background-color 0.3s ease;
+        }
+        .total {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            table, th, td {
+                font-size: 0.9em;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Estudiantes por Grado y Sección</h1>
+
+        <!-- Siete A -->
+        <h2>Siete A (17 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>ALBARAN</td><td>GAVIRIA</td><td>MARIANA</td><td></td><td>V</td></tr>
+            <tr><td>2</td><td>ALEGRIA</td><td>MUÑOZ</td><td>ESTEBAN</td><td>MATIAS</td><td>FS</td></tr>
+            <tr><td>3</td><td>ANGULO</td><td>SALAS</td><td>YEIKER</td><td>YOHAN</td><td>FS</td></tr>
+            <tr><td>4</td><td>ARIAS</td><td>ULCHUR</td><td>LAURENT</td><td>STEFANY</td><td>V</td></tr>
+            <tr><td>5</td><td>CERON</td><td>OSPINA</td><td>DAVID</td><td>SANTIAGO</td><td>X</td></tr>
+            <tr><td>6</td><td>CHIMUNJA</td><td>RUIZ</td><td>EMANUEL</td><td></td><td>N</td></tr>
+            <tr><td>7</td><td>FORY</td><td>FAJARDO</td><td>JHOAN</td><td>SEBASTIAN</td><td>N</td></tr>
+            <tr><td>8</td><td>JIMENEZ</td><td>JIMENEZ</td><td>YEISON</td><td>FELIPE</td><td>X</td></tr>
+            <tr><td>9</td><td>MENESES</td><td>OJEDA</td><td>KATHERIN</td><td>VALERIA</td><td>V</td></tr>
+            <tr><td>10</td><td>OROZCO</td><td>GUTIERREZ</td><td>MIGUEL</td><td>EDUARDO</td><td>B</td></tr>
+            <tr><td>11</td><td>PERDOMO</td><td>GURRUTE</td><td>KAREN</td><td>DANIELA</td><td>V</td></tr>
+            <tr><td>12</td><td>PEREZ</td><td>GONZALEZ</td><td>SAMUEL</td><td>ENRIQUE</td><td>N</td></tr>
+            <tr><td>13</td><td>SANDOVAL</td><td>REYES</td><td>MITCHELL</td><td>TATIANA</td><td>N</td></tr>
+            <tr><td>14</td><td>SILVA</td><td>OCAÑA</td><td>STYVEN</td><td></td><td>V</td></tr>
+            <tr><td>15</td><td>TORRES</td><td>ALFARO</td><td>ERICK</td><td>FABIAN</td><td>N</td></tr>
+            <tr><td>16</td><td>TRUJILLO</td><td>RODRIGUEZ</td><td>NICOLAS</td><td>ALEJANDRO</td><td>FS</td></tr>
+            <tr><td>17</td><td>VIDAL</td><td>QUILINDO</td><td>MARIA</td><td>CAMILA</td><td>V</td></tr>
+        </table>
+
+        <!-- Siete B -->
+        <h2>Siete B (10 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>ASTAIZA</td><td>TROCHEZ</td><td>HARRYZON</td><td>EDUARDO</td><td>B</td></tr>
+            <tr><td>2</td><td>CASAMACHIN</td><td>CAMPO</td><td>PAULO</td><td>FELIPE</td><td>V</td></tr>
+            <tr><td>3</td><td>CASANOVA</td><td>GONZALEZ</td><td>ANDRES</td><td>RAFAEL</td><td>V</td></tr>
+            <tr><td>4</td><td>GUAMANGA</td><td>LOPEZ</td><td>VALERIN</td><td>TATIANA</td><td>N</td></tr>
+            <tr><td>5</td><td>GUERRERO</td><td>ROA</td><td>JUAN</td><td>SEBASTIAN</td><td>N</td></tr>
+            <tr><td>6</td><td>GUTIERREZ</td><td>MONTENEGO</td><td>BRAYAN</td><td></td><td>FS</td></tr>
+            <tr><td>7</td><td>MONTENEGRO</td><td>ANGULO</td><td>JHONIER</td><td>ALONSO</td><td>FS</td></tr>
+            <tr><td>8</td><td>RODRIGUEZ</td><td>NARVAEZ</td><td>DIANA</td><td>MARSELA</td><td>V</td></tr>
+            <tr><td>9</td><td>SANCHEZ</td><td>CORREA</td><td>ASHLEY</td><td>JULIETH</td><td>V</td></tr>
+            <tr><td>10</td><td>SANCHEZ</td><td>CORREA</td><td>JULIETH</td><td>ALEXANDRA</td><td>V</td></tr>
+        </table>
+
+        <!-- Siete C -->
+        <h2>Siete C (7 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>MEJIA</td><td>DOMINGUEZ</td><td>KEILAYS</td><td>INELLA</td><td>X</td></tr>
+            <tr><td>2</td><td>ORTIZ</td><td>ORDOÑEZ</td><td>JOSE</td><td>MIGUEL</td><td>FS</td></tr>
+            <tr><td>3</td><td>PIZO</td><td>MACA</td><td>YOJAN</td><td>ESTIVEN</td><td>FS</td></tr>
+            <tr><td>4</td><td>SALAZAR</td><td>ZAMBRANO</td><td>FANNY</td><td>ALEJANDRA</td><td>B</td></tr>
+            <tr><td>5</td><td>VALLEJO</td><td>BERMEO</td><td>CRISTIAN</td><td>DAVID</td><td>X</td></tr>
+            <tr><td>6</td><td>VALLEJO</td><td>CRUZ</td><td>SALEM</td><td></td><td>X</td></tr>
+            <tr><td>7</td><td>VANEGAS</td><td>RODRIGUEZ</td><td>DANA</td><td>VALENTINA</td><td>B</td></tr>
+        </table>
+
+        <!-- Siete D -->
+        <h2>Siete D (16 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>AGREDO</td><td>VELASQUEZ</td><td>SAMUEL</td><td></td><td>V</td></tr>
+            <tr><td>2</td><td>CHICANGANA</td><td>BOLAÑOS</td><td>HELEN</td><td>ALEXANDRA</td><td>V</td></tr>
+            <tr><td>3</td><td>CUETIA</td><td>YULE</td><td>EVELYN</td><td>YUCELX</td><td>N</td></tr>
+            <tr><td>4</td><td>FAJARDO</td><td>SERRATO</td><td>YURLI</td><td>MARIANA</td><td>V</td></tr>
+            <tr><td>5</td><td>GOMEZ</td><td>GARCIA</td><td>ANGELICA</td><td>ISABEL</td><td>N</td></tr>
+            <tr><td>6</td><td>GRANDA</td><td>VARGAS</td><td>JOSEPHLYN</td><td>ALEXANDRA</td><td>V</td></tr>
+            <tr><td>7</td><td>GURRUTE</td><td>SANCHEZ</td><td>ANYELINE</td><td>YULIETH</td><td>N</td></tr>
+            <tr><td>8</td><td>MANQUILLO</td><td>GUACA</td><td>ALISON</td><td>SOFIA</td><td>N</td></tr>
+            <tr><td>9</td><td>MENESES</td><td>MUÑOZ</td><td>CAMILO</td><td></td><td>FS</td></tr>
+            <tr><td>10</td><td>ORTEGA</td><td>GUILLEN</td><td>JHONKEIBERT</td><td>ALEXANDER</td><td>FS</td></tr>
+            <tr><td>11</td><td>ORTIZ</td><td>CASTILLO</td><td>DYLAN</td><td>GABRIEL</td><td>N</td></tr>
+            <tr><td>12</td><td>PULICHE</td><td>CHANTRE</td><td>JUAN</td><td>DIEGO</td><td>X</td></tr>
+            <tr><td>13</td><td>QUINTERO</td><td>DAZA</td><td>JEFFRY</td><td>ALEXANDER</td><td>N</td></tr>
+            <tr><td>14</td><td>RENGIFO</td><td>MUÑOZ</td><td>YULIETH</td><td>TATIANA</td><td>N</td></tr>
+            <tr><td>15</td><td>SANCHEZ</td><td>SOLARTE</td><td>ANDRES</td><td>FELIPE</td><td>N</td></tr>
+            <tr><td>16</td><td>VELASCO</td><td>CASTRO</td><td>DIEGO</td><td>ALEJANDRO</td><td>FS</td></tr>
+        </table>
+
+        <!-- Ocho A -->
+        <h2>Ocho A (22 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>AGUILAR</td><td>GOMEZ</td><td>NASLY</td><td>SOFIA</td><td>V</td></tr>
+            <tr><td>2</td><td>ALMARIO</td><td>ALMARIO</td><td>LUIS</td><td>FELIPE</td><td>V</td></tr>
+            <tr><td>3</td><td>DAZA</td><td>BOHOJORGE</td><td>SEILIN</td><td>YARITH</td><td>N</td></tr>
+            <tr><td>4</td><td>DAZA</td><td>GARCÍA</td><td>DANIEL</td><td>ESTIVEN</td><td>V</td></tr>
+            <tr><td>5</td><td>GONZALEZ</td><td>BERNAL</td><td>CARLOS</td><td>DAVID</td><td>V</td></tr>
+            <tr><td>6</td><td>GURRUTE</td><td>GUEVARA</td><td>JOSE</td><td>IGNACIO</td><td>N</td></tr>
+            <tr><td>7</td><td>INGA</td><td>TERE</td><td>ANDERSON</td><td>YESID</td><td>V</td></tr>
+            <tr><td>8</td><td>LEITON</td><td>LEYTON</td><td>MICHEEL</td><td>SOFIA</td><td>X</td></tr>
+            <tr><td>9</td><td>MAMIAN</td><td>HURTADO</td><td>GISSELLE</td><td>VERÓNICA</td><td>X</td></tr>
+            <tr><td>10</td><td>MAÑUNGA</td><td>CAMACHO</td><td>SAMUEL</td><td>ESTEBAN</td><td>V</td></tr>
+            <tr><td>11</td><td>MORALES</td><td>FAJARDO</td><td>JHON</td><td>ALEXANDER</td><td>V</td></tr>
+            <tr><td>12</td><td>MORALES</td><td>ASTAIZA</td><td>LISSE</td><td>NATALIA</td><td>X</td></tr>
+            <tr><td>13</td><td>NAVIA</td><td>MENESES</td><td>SHARID</td><td></td><td>V</td></tr>
+            <tr><td>14</td><td>PEREZ</td><td>GONZALEZ</td><td>JESUS</td><td>GABRIEL</td><td>V</td></tr>
+            <tr><td>15</td><td>RENGIFO</td><td>MUÑOZ</td><td>JHON</td><td>ERICK</td><td>X</td></tr>
+            <tr><td>16</td><td>RIVERA</td><td>FLOR</td><td>MARIA</td><td>DEL MAR</td><td>V</td></tr>
+            <tr><td>17</td><td>RODRIGUEZ</td><td>ERAZO</td><td>EIMY</td><td>VALERIA</td><td>V</td></tr>
+            <tr><td>18</td><td>RUIZ</td><td>ORTEGA</td><td>MICHELL</td><td>TATIANA</td><td>V</td></tr>
+            <tr><td>19</td><td>SANDOVAL</td><td>LEGARDA</td><td>NICOLAS</td><td></td><td>V</td></tr>
+            <tr><td>20</td><td>VALENCIA</td><td>RIASCOS</td><td>HELEN</td><td>JINEZA</td><td>V</td></tr>
+            <tr><td>21</td><td>VICTORIA</td><td>RIVERA</td><td>CRISTIAN</td><td>SANTIAGO</td><td>V</td></tr>
+            <tr><td>22</td><td>ZAMBARNO</td><td></td><td>SORANY</td><td>ANDREA</td><td>V</td></tr>
+        </table>
+
+        <!-- Ocho B -->
+        <h2>Ocho B (15 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>ACOSTA</td><td>SANCHEZ</td><td>DANIEL</td><td>ALEJANDRO</td><td>FB</td></tr>
+            <tr><td>2</td><td>ARANDA</td><td>URRUTIA</td><td>SAMUEL</td><td>DAVID</td><td>N</td></tr>
+            <tr><td>3</td><td>CHICANGANA</td><td>GOMEZ</td><td>VICTOR</td><td>ANDRES</td><td>FB</td></tr>
+            <tr><td>4</td><td>CHICANGANA</td><td>JARAMILLO</td><td>JUAN</td><td>ESTEBAN</td><td>X</td></tr>
+            <tr><td>5</td><td>CUCUÑAME</td><td>VERNAZA</td><td>KAROL</td><td>JULIANA</td><td>V</td></tr>
+            <tr><td>6</td><td>CUCUÑAME</td><td>VERNAZA</td><td>MARIA</td><td>CAMILA</td><td>V</td></tr>
+            <tr><td>7</td><td>ELIQUITAN</td><td>MUÑOZ</td><td>HEYLIN</td><td>ORIANA</td><td>V</td></tr>
+            <tr><td>8</td><td>ERAZO</td><td>FLOR</td><td>JULIAN</td><td>ANDRES</td><td>FB</td></tr>
+            <tr><td>9</td><td>FLOREZ</td><td>UNI</td><td>DORLAN</td><td></td><td>FB</td></tr>
+            <tr><td>10</td><td>LEDEZMA</td><td>ZAMBRANO</td><td>DISNEY</td><td>LOANA</td><td>X</td></tr>
+            <tr><td>11</td><td>MARTINEZ</td><td>ZAMBRANO</td><td>KEVIN</td><td>ANDRES</td><td>FB</td></tr>
+            <tr><td>12</td><td>MAZABUEL</td><td>MAZABUEL</td><td>YEISON</td><td>ALEJANDRO</td><td>V</td></tr>
+            <tr><td>13</td><td>MELLIZO</td><td>DAZA</td><td>JHOAN</td><td>ALEXIS</td><td>F</td></tr>
+            <tr><td>14</td><td>PANESSO</td><td>AVENDAÑO</td><td>DAVID</td><td>ALEJANDRO</td><td>FS</td></tr>
+            <tr><td>15</td><td>ROJAS</td><td>ARROYAVE</td><td>JUAN</td><td>DAVID</td><td>X</td></tr>
+        </table>
+
+        <!-- Ocho C -->
+        <h2>Ocho C (20 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>BENAVIDES</td><td>PAZ</td><td>SAMUEL</td><td></td><td>FB</td></tr>
+            <tr><td>2</td><td>BURBANO</td><td>TOSE</td><td>MIGUEL</td><td>ANGEL</td><td>N</td></tr>
+            <tr><td>3</td><td>CASTRO</td><td>PALECHOR</td><td>YEISON</td><td>ANDRES</td><td>V</td></tr>
+            <tr><td>4</td><td>CORTES</td><td>CASTILLO</td><td>JUAN</td><td>JOSE</td><td>FB</td></tr>
+            <tr><td>5</td><td>CRUZ</td><td>ZAMBRANO</td><td>ARI</td><td>ESTIBEN</td><td>B</td></tr>
+            <tr><td>6</td><td>FLOR</td><td>CUCUÑAME</td><td>JHON</td><td>ALEX</td><td>B</td></tr>
+            <tr><td>7</td><td>GARCIA</td><td>MONTES</td><td>YELEN</td><td>DALIHANA</td><td>N</td></tr>
+            <tr><td>8</td><td>IBARRA</td><td>ESTUPIÑAN</td><td>LAUREN</td><td>VALENTINA</td><td>N</td></tr>
+            <tr><td>9</td><td>ISAZA</td><td>CAMAYO</td><td>STIVENSON</td><td>DAVID</td><td>N</td></tr>
+            <tr><td>10</td><td>LEITON</td><td></td><td>YUNIOR</td><td>ALEJANDRO</td><td>N</td></tr>
+            <tr><td>11</td><td>MAMIAN</td><td>MUÑOZ</td><td>MAIRA</td><td>LIZETH</td><td>X</td></tr>
+            <tr><td>12</td><td>MENESES</td><td>MAMIAN</td><td>SARA</td><td>ISABEL</td><td>V</td></tr>
+            <tr><td>13</td><td>MENESES</td><td>MARTINEZ</td><td>DANER</td><td>YHOAN</td><td>FB</td></tr>
+            <tr><td>14</td><td>RAMIREZ</td><td>TORRES</td><td>CIELO</td><td></td><td>V</td></tr>
+            <tr><td>15</td><td>VICTORIA</td><td>TOBAR</td><td>DANIEL</td><td>ANDRES</td><td>FB</td></tr>
+            <tr><td>16</td><td>MUÑOZ</td><td>ALFONSO</td><td>STEFANNY</td><td>MARCELA</td><td>V</td></tr>
+            <tr><td>17</td><td>MUÑOZ</td><td>TAFUR</td><td>JHON</td><td>ERICK</td><td>FB</td></tr>
+            <tr><td>18</td><td></td><td>SAMBONI</td><td>JUAN</td><td>CAMILO</td><td>N</td></tr>
+            <tr><td>19</td><td>ORDOÑEZ</td><td>GUSTIN</td><td>LAURA</td><td>SOFIA</td><td>N</td></tr>
+            <tr><td>20</td><td>GONZALES</td><td>CHANTRE</td><td>JHON</td><td>KEVIN</td><td>N</td></tr>
+        </table>
+
+        <!-- Nueve A -->
+        <h2>Nueve A (13 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>CAMPO</td><td>QUINA</td><td>GISSEL</td><td>ANDREA</td><td>V</td></tr>
+            <tr><td>2</td><td>CARVAJAL</td><td>PORRAS</td><td>MANUEL</td><td>SANTIAGO</td><td>V</td></tr>
+            <tr><td>3</td><td>LUCUMI</td><td>ROJAS</td><td>JESSI</td><td>NATALIA</td><td>V</td></tr>
+            <tr><td>4</td><td>MUÑOZ</td><td>MORENO</td><td>JHONY</td><td>ARMENDARIS</td><td>X</td></tr>
+            <tr><td>5</td><td>MURILLO</td><td>ACHIPIZ</td><td>DANNA</td><td>VALENTINA</td><td>V</td></tr>
+            <tr><td>6</td><td>NAVIA</td><td>MENESES</td><td>OSCAR</td><td>MAURICIO</td><td>V</td></tr>
+            <tr><td>7</td><td>ORTEGA</td><td>RIVERA</td><td>KEISSY</td><td>SAMANTA</td><td>X</td></tr>
+            <tr><td>8</td><td>ORTIZ</td><td>ORTEGA</td><td>JHON</td><td>EDWIN</td><td>N</td></tr>
+            <tr><td>9</td><td>QUILINDO</td><td>QUILINDO</td><td>JHONI</td><td>ALEXANDER</td><td>X</td></tr>
+            <tr><td>10</td><td>SOLARTE</td><td>CRUCES</td><td>ANA</td><td>MARIA</td><td>N</td></tr>
+            <tr><td>11</td><td>VELEZ</td><td>RODRIGUEZ</td><td>BAYOLETH</td><td></td><td>V</td></tr>
+            <tr><td>12</td><td>VILLAQUIRAN</td><td>SALAZAR</td><td>TATIANA</td><td>ALEJANDRA</td><td>V</td></tr>
+            <tr><td>13</td><td>YEPEZ</td><td>PEREZ</td><td>YOUSSEFF</td><td>MOISES</td><td>FB</td></tr>
+        </table>
+
+        <!-- Nueve B -->
+        <h2>Nueve B (5 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>APARICIO</td><td>SOLORZANO</td><td>LUCIANO</td><td>SEBASTIAN</td><td>N</td></tr>
+            <tr><td>2</td><td>GARCES</td><td>RAMOS</td><td>MARLON</td><td>STIVEN</td><td>FS</td></tr>
+            <tr><td>3</td><td>LUNA</td><td>RUANO</td><td>ANTONI</td><td>ALEJANDRO</td><td>N</td></tr>
+            <tr><td>4</td><td>ORTIZ</td><td>CASTILLO</td><td>JOSE</td><td>ALEJANDRO</td><td>N</td></tr>
+            <tr><td>5</td><td>PRADO</td><td>VALENCIA</td><td>JOHAN</td><td>ALEXANDER</td><td>X</td></tr>
+        </table>
+
+        <!-- Nueve C -->
+        <h2>Nueve C (2 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>QUICENO</td><td>OROZCO</td><td>JOHAN</td><td>ANDRES</td><td>X</td></tr>
+            <tr><td>2</td><td>RIVERA</td><td>HOYOS</td><td>DANNA</td><td>SOFIA</td><td>V</td></tr>
+        </table>
+
+        <!-- Diez B -->
+        <h2>Diez B (2 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>REINA</td><td>PALACIOS</td><td>DANNA</td><td>SOFIA</td><td>V</td></tr>
+            <tr><td>2</td><td>ROMERO</td><td>DUQUE</td><td>ISABEL</td><td></td><td>B</td></tr>
+        </table>
+
+        <!-- Diez C -->
+        <h2>Diez C (4 estudiantes)</h2>
+        <table>
+            <tr><th>#</th><th>Apellido 1</th><th>Apellido 2</th><th>Nombre 1</th><th>Nombre 2</th><th>Código</th></tr>
+            <tr><td>1</td><td>CAMAYO</td><td>ALVAREZ</td><td>JUAN</td><td>JOSE</td><td>V</td></tr>
+            <tr><td>2</td><td>DUCUARA</td><td>GIL</td><td>LAURA</td><td>MELISA</td><td>X</td></tr>
+            <tr><td>3</td><td>FRANCO</td><td>ALMEIDA</td><td>MAHOLY</td><td>DALAY</td><td>N</td></tr>
+            <tr><td>4</td><td>ZAMBRANO</td><td>GUACHETA</td><td>JORDAN</td><td>DAVID</td><td>N</td></tr>
+        </table>
+
+        <!-- Totales -->
+        <h2>Totales</h2>
+        <p class="total">Septimos: 50 (17 + 10 + 7 + 16)</p>
+        <p class="total">Octavos: 57 (22 + 15 + 20)</p>
+        <p class="total">Novenos: 20 (13 + 5 + 2)</p>
+        <p class="total">Decimos: 6 (2 + 4)</p>
+        <p class="total">Total General: 133</p>
+    </div>
+</body>
+</html>

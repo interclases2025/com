@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deportes</title>
-    <link rel="icon" href="deportes-con-balones.ico">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: url('fondo2.jpg') no-repeat center center fixed; background-size: cover;color: #ffffff; margin: 0; padding: 0;}
+        body { font-family: Arial, sans-serif; margin: 0; background: url('imagenes/fondo2.jpg') no-repeat center center fixed; background-size: cover;color: #ffffff; margin: 0; padding: 0;}
         .container { display: flex; flex-wrap: wrap; }
         .menu { width: 100%; max-width: 250px; border-right: 2px solid #555; padding: 10px; background-color: #2b2b2b; }
         .menu h3, .menu ul { color: #ffffff; }
@@ -79,839 +78,17 @@
         function cargarDeporte(deporte) {
             let contenido = `<h2>${deporte}</h2>`;
             if (deporte === 'Fútbol Sala' ) {
-                contenido += `
-                <button class="boton" onclick="window.location.href='Reglas futsal.html'">Reglas</button>
-                    <h3>Próximos partidos</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Género</th>
-                        </tr>
-                        <tr>
-                            <td>28/04/2025</td>
-                            <td>11A</td>
-                            <td>10B</td>
-                            <td>Maculino</td>
-                        </tr>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Género</th>
-                        </tr>
-                        <tr>
-                            <td>29/04/2025</td>
-                            <td>Primer lugar</td>
-                            <td>Tercer lugar</td>
-                            <td>Semifinal Masculino</td>
-                        </tr>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Género</th>
-                        </tr>
-                        <tr>
-                            <td>30/04/2025</td>
-                            <td>Segundo lugar</td>
-                            <td>Cuarto Lugar</td>
-                            <td>Semifinal Masculino</td>
-                        </tr>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Género</th>
-                        </tr>
-                        <tr>
-                            <td>01/05/2025</td>
-                            <td>Profesoras</td>
-                            <td>10A</td>
-                            <td>Femenino</td>
-                        </tr>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Género</th>
-                        </tr>
-                        <tr>
-                            <td>25/04/2025</td>
-                            <td>1 Semifinalista</td>
-                            <td>2 Semifinalista</td>
-                            <td>Final Masculino</td>
-                        </tr>
-                    </table>
-                    <h3>Resultados de partidos (Primera semana)</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>17/02/2025</td>
-                            <td>10A</td>
-                            <td>10C</td>
-                            <td>1-3</td>
-                            <td>10C</td>
-                            <td>Samir V.</td>
-                        </tr>
-                    </table>
-                    
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>18/02/2025</td>
-                            <td>10B</td>
-                            <td>9A</td>
-                            <td>1-1</td>
-                            <td>Empate</td>
-                            <td>Briyit</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>19/02/2025</td>
-                            <td>11B</td>
-                            <td>10B</td>
-                            <td>2-3</td>
-                            <td>10B</td>
-                            <td>Andres</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>20/02/2025</td>
-                            <td>9B</td>
-                            <td>10C</td>
-                            <td>Ganado poe W</td>
-                            <td>10C</td>
-                            <td>x</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>21/02/2025</td>
-                            <td>9B</td>
-                            <td>9C</td>
-                            <td>8-0</td>
-                            <td>9B</td>
-                            <td>Santiago</td>
-                        </tr>
-                        </table>
-                         <h3>Resultados de partidos (Segunda semana)</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>24/02/2025</td>
-                            <td>10B</td>
-                            <td>10A</td>
-                            <td>12-1</td>
-                            <td>10B</td>
-                            <td>Steven</td>
-                        </tr>
-                    </table>
-                    
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>25/02/2025</td>
-                            <td>11A</td>
-                            <td>9C</td>
-                            <td>7-4</td>
-                            <td>11A</td>
-                            <td>Valentina T.</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>26/02/2025</td>
-                            <td>10A</td>
-                            <td>10C</td>
-                            <td>3-3</td>
-                            <td>Empate</td>
-                            <td>Luisa V</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>27/02/2025</td>
-                            <td>11A</td>
-                            <td>9A</td>
-                            <td>6-2</td>
-                            <td>11A</td>
-                            <td>Jhon Jader</td>
-                        </tr>
-                    </table>
-                    <h3>Resultados de partidos (Tercera semana)</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>03/03/2025</td>
-                            <td>11B</td>
-                            <td>9B</td>
-                            <td>2-3</td>
-                            <td>9B</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>04/03/2025</td>
-                            <td>11B</td>
-                            <td>9C</td>
-                            <td>0-7</td>
-                            <td>9C</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>   
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>06/03/2025</td>
-                            <td>10A</td>
-                            <td>10B</td>
-                            <td>3-1</td>
-                            <td>10A</td>
-                            <td>Sheril</td>
-                        </tr>
-                    </table>
-                    <table>    
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>07/03/2025</td>
-                            <td>11A</td>
-                            <td>9C</td>
-                            <td>7-2</td>
-                            <td>11A</td>
-                            <td>Jhon Jader</td>
-                        </tr>
-                    </table>
-                    <h3>Resultados de partidos (Cuarta semana)</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>10/03/2025</td>
-                            <td>10B</td>
-                            <td>10C</td>
-                            <td>4-2</td>
-                            <td>10B</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>11/03/2025</td>
-                            <td>11A</td>
-                            <td>10A</td>
-                            <td>4-3</td>
-                            <td>11A</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>12/03/2025</td>
-                            <td>Comercial</td>
-                            <td>Egresados</td>
-                            <td>8-2</td>
-                            <td>Comercial</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>13/03/2025</td>
-                            <td>10C</td>
-                            <td>9C</td>
-                            <td>0-2</td>
-                            <td>9C</td>
-                            <td>X</td>
-                        </tr>
-                        </table>
-                        <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>14/03/2025</td>
-                            <td>9A</td>
-                            <td>9B</td>
-                            <td>1-1</td>
-                            <td>Empate</td>
-                            <td>x</td>
-                        </tr>
-                    </table>
-                     <h3>Resultados de partidos (Quinta semana)</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>17/03/2025</td>
-                            <td>11B</td>
-                            <td>10C</td>
-                            <td>8-0</td>
-                            <td>11B</td>
-                            <td>Miguel</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>19/03/2025</td>
-                            <td>11A</td>
-                            <td>9B</td>
-                            <td>5-3</td>
-                            <td>11A</td>
-                            <td>Ruales</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>20/03/2025</td>
-                            <td>11A</td>
-                            <td>9A</td>
-                            <td>5-2</td>
-                            <td>11A</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>25/03/2025</td>
-                            <td>11B</td>
-                            <td>10B</td>
-                            <td>0-4</td>
-                            <td>10B</td>
-                            <td>Astrid</td>
-                        </tr>
-                        </table>
-                        <h3>Resultados de partidos (Sexta semana)</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>31/03/2025</td>
-                            <td>9A</td>
-                            <td>9C</td>
-                            <td>12-1</td>
-                            <td>9A</td>
-                            <td>Alexander</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>01/04/2025</td>
-                            <td>11B</td>
-                            <td>10A</td>
-                            <td>6-2</td>
-                            <td>10A</td>
-                            <td>Sofia Hoyos</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>02/04/2025</td>
-                            <td>Profesoras</td>
-                            <td>9A</td>
-                            <td>2-2</td>
-                            <td>Empate</td>
-                            <td>Karen</td>
-                        </tr>
-                    </table>
-                    <h3>Resultados de partidos (Septima semana)</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>7/04/2025</td>
-                            <td>Comercial</td>
-                            <td>Egresados</td>
-                            <td>7-5</td>
-                            <td>X</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>8/04/2025</td>
-                            <td>10C</td>
-                            <td>11B</td>
-                            <td>-</td>
-                            <td></td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>8/04/2025</td>
-                            <td>10B</td>
-                            <td>9B</td>
-                            <td>6-5</td>
-                            <td>10B</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>08/04/2025</td>
-                            <td>11A</td>
-                            <td>10C</td>
-                            <td>2-2</td>
-                            <td>Empate</td>
-                            <td>X</td>
-                        </tr>
-                        </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>08/04/2025</td>
-                            <td>11A</td>
-                            <td>10C</td>
-                            <td>10-3</td>
-                            <td>11A</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>09/04/2025</td>
-                            <td>11A</td>
-                            <td>10B</td>
-                            <td>3-3</td>
-                            <td>Empate</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>10/04/2025</td>
-                            <td>Profesoras</td>
-                            <td>10C</td>
-                            <td>7-3</td>
-                            <td>Profesoras</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>11/04/2025</td>
-                            <td>11B</td>
-                            <td>9A</td>
-                            <td>X-X</td>
-                            <td>9A</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <h3>Resultados de partidos (Octava semana)</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>21/04/2025</td>
-                            <td>10C</td>
-                            <td>9A</td>
-                            <td>0-2</td>
-                            <td>9A</td>
-                            <td>Alexander</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>24/04/2025</td>
-                            <td>11A</td>
-                            <td>11B</td>
-                            <td>W</td>
-                            <td>11A</td>
-                            <td>X</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>24/04/2025</td>
-                            <td>10C</td>
-                            <td>10B</td>
-                            <td>6-2</td>
-                            <td>10C</td>
-                            <td>Karen</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>24/04/2025</td>
-                            <td>11A</td>
-                            <td>11B</td>
-                            <td>5-5</td>
-                            <td>Empate</td>
-                            <td>X</td>
-                        </tr>
-                        </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>24/04/2025</td>
-                            <td>9A</td>
-                            <td>10B</td>
-                            <td>7-6</td>
-                            <td>9A</td>
-                            <td>Alexander</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>24/04/2025</td>
-                            <td>9C</td>
-                            <td>10C</td>
-                            <td>4-10</td>
-                            <td>10C</td>
-                            <td>De la Cruz</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>24/04/2025</td>
-                            <td>11B</td>
-                            <td>9C</td>
-                            <td>7-4</td>
-                            <td>11B</td>
-                            <td>Jose</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>24/04/2025</td>
-                            <td>9C</td>
-                            <td>10B</td>
-                            <td>5-5</td>
-                            <td>Empate</td>
-                            <td>Yojan</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Marcador</th>
-                            <th>Ganador</th>
-                            <th>J. Destacado</th>
-                        </tr>
-                        <tr>
-                            <td>24/04/2025</td>
-                            <td>9B</td>
-                            <td>10C</td>
-                            <td>7-5</td>
-                            <td>9B</td>
-                            <td>X</td>
-                        </tr>
-                    </table>`;
-            }else if (deporte === 'Baloncesto') {
+    contenido += `
+        <button class="boton" onclick="window.location.href='Reglas futsal.html'">Reglas</button>
+        <h3>Equipo masculino ganador: 11A</h3>
+        <img src="imagenes/campeones.jpg" alt="Equipo masculino 11A" style="max-width: 50%; height: center; border-radius: 10px; margin-bottom: 20px;">
+        
+        <h3>Equipo femenino ganador: Aún no se sabe</h3>
+        <img src="imagenes/pendiente.jpg" alt="Equipo femenino pendiente" style="max-width: 100%; height: auto; opacity: 0.5; border-radius: 10px;">
+    `;
+}
+
+            else if (deporte === 'Baloncesto') {
                 contenido += `
                 <button class="boton" onclick="window.location.href='reglas baloncesto.html'">Reglas</button>    
                 <h3>Próximos partidos</h3>
@@ -947,39 +124,98 @@
                         </tr>
                     </table>`;
             }else if (deporte === 'Voleibol') {
-                contenido += `
-                <button class="boton" onclick="window.location.href='reglas voleibol.html'">Reglas</button>    
-                <h3>Próximos partidos</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo 1</th>
-                            <th>Equipo 2</th>
-                            <th>Género</th>
-                        </tr>
-                        <tr>
-                            <td>x</td>
-                            <td>x</td>
-                            <td>x</td>
-                            <td>Mixto</td>
-                        </tr>
-                    </table>
-                    <h3>Resultados de partidos</h3>
-                    <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo</th>
-                            <th>Jugador</th>
-                            <th>Goles/Puntos</th>
-                        </tr>
-                        <tr>
-                            <td>x</td>
-                            <td>x</td>
-                            <td>x</td>
-                            <td>x</td>
-                        </tr>
-                    </table>`;
-            } else if (deporte === 'Natación' || deporte === 'Atletismo' || deporte === 'Ciclismo') {
+    contenido += `
+        <button class="boton" onclick="window.location.href='reglas voleibol.html'">Reglas</button>    
+        <h3>Resultados de partidos</h3>
+        <table>
+            <tr>
+                <th>Equipo 1</th>
+                <th>Equipo 2</th>
+                <th>Ganador</th>
+            </tr>
+            <tr>
+                <td>9A</td>
+                <td>10A</td>
+                <td>9A</td>
+            </tr>
+            <tr>
+                <td>10B</td>
+                <td>9A</td>
+                <td>10B</td>
+            </tr>
+            <tr>
+                <td>11B</td>
+                <td>10A</td>
+                <td>11B</td>
+            </tr>
+            <tr>
+                <td>11B</td>
+                <td>9A</td>
+                <td>11B</td>
+            </tr>
+            <tr>
+                <td>9B</td>
+                <td>9A</td>
+                <td>9B</td>
+            </tr>
+            <tr>
+                <td>10C</td>
+                <td>11B</td>
+                <td>10C</td>
+            </tr>
+            <tr>
+                <td>10C</td>
+                <td>11A</td>
+                <td>10C</td>
+            </tr>
+            <tr>
+                <td>10C</td>
+                <td>9C</td>
+                <td>9C</td>
+            </tr>
+            <tr>
+                <td>10B</td>
+                <td>10C</td>
+                <td>10C</td>
+            </tr>
+            <tr>
+                <td>11A</td>
+                <td>10B</td>
+                <td>10B</td>
+            </tr>
+            <tr>
+                <td>11B</td>
+                <td>11A</td>
+                <td>11A</td>
+            </tr>
+            <tr>
+                <td>11A</td>
+                <td>9A</td>
+                <td>11A</td>
+            </tr>
+            <tr>
+                <td>10B</td>
+                <td>11B</td>
+                <td>10B</td>
+            </tr>
+            <tr>
+                <td>9C</td>
+                <td>10B</td>
+                <td>10B</td>
+            </tr>
+            <tr>
+                <td>9C</td>
+                <td>11B</td>
+                <td>11B</td>
+            </tr>
+            <tr>
+                <td>11A</td>
+                <td>10A</td>
+                <td>11A</td>
+            </tr>
+        </table>`;
+}
+else if (deporte === 'Natación' || deporte === 'Atletismo' || deporte === 'Ciclismo') {
                 contenido += `
                 <button class="boton" onclick="window.location.href='reglas natacion.html'">Reglas</button>    
                 <h3>Eventos próximos</h3>

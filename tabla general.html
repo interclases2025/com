@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla General</title>
-    <link rel="icon" href="tabla.ico">
     <style>
         body { 
             font-family: Arial, sans-serif; 
@@ -13,7 +12,7 @@
             color: white;
         }
         table { 
-            width: 60%; 
+            width: 80%; 
             margin: 20px auto; 
             border-collapse: collapse; 
             background-color: #1e1e1e; 
@@ -29,19 +28,19 @@
             background-color: #4CAF50; 
             color: white; 
         }
+        .eliminado {
+            background-color: rgba(255, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
     <h2>Tabla General</h2>
-    <h3>Ultima Actualizacion 27/04/2025</h3>
     <table id="tablaGeneral">
         <thead>
             <tr>
                 <th>Posición</th>
                 <th>Equipo</th>
                 <th>Puntaje</th>
-                <th>Goles a Favor</th>
-                <th>Goles en Contra</th>
             </tr>
         </thead>
         <tbody>
@@ -49,65 +48,56 @@
         </tbody>
     </table>
 
-    <h2>Color de Equipamiento</h2>
-    <table id="colorEquipamiento">
+    <h2>Cuotas de Inscripción</h2>
+    <table>
         <thead>
             <tr>
                 <th>Equipo</th>
-                <th>Suscripción Pagada</th>
-                <th>Color</th>
+                <th>Primera Cuota</th>
+                <th>Segunda Cuota</th>
+                <th>Total</th>
+                <th>Debe</th>
             </tr>
         </thead>
         <tbody>
-            <tr><td>9A</td><td>$150.000</td><td>Rosado</td></tr>
-            <tr><td>9B</td><td>$130.000</td><td>Combinado</td></tr>
-            <tr><td>9C</td><td>$150.000</td><td>Vino Tinto</td></tr>
-            <tr><td>10A</td><td>$150.000</td><td>Blanco</td></tr>
-            <tr><td>10B</td><td>$150.000</td><td>Azul oscuro</td></tr>
-            <tr><td>10C</td><td>$150.000</td><td>Verde Oscuro</td></tr>
-            <tr><td>11A</td><td>$205.500</td><td>Gris</td></tr>
-            <tr><td>11B</td><td>$153.000</td><td>Celeste claro</td></tr>
-            <tr><td>Total</td><td>$1.238.500</td><td>X</td></tr>
+            <tr><td>Profesores</td><td>$0</td><td>$180.000</td><td>$180.000</td><td>$270.000</td></tr>
+            <tr><td>11A</td><td>$205.500</td><td>$244.500</td><td>$450.000</td><td>$0</td></tr>
+            <tr><td>11B</td><td>$153.000</td><td>$157.000</td><td>$310.000</td><td>$147.000</td></tr>
+            <tr><td>10C</td><td>$150.000</td><td>$150.000</td><td>$300.000</td><td>$150.000</td></tr>
+            <tr><td>10B</td><td>$150.000</td><td>$150.000</td><td>$300.000</td><td>$150.000</td></tr>
+            <tr><td>10A</td><td>$150.000</td><td>$70.000</td><td>$220.000</td><td>$230.000</td></tr>
+            <tr><td>9C</td><td>$150.000</td><td>$160.000</td><td>$310.000</td><td>$140.000</td></tr>
+            <tr><td>9B</td><td>$150.000</td><td>No participa</td><td>$150.000</td><td>No participa</td></tr>
+            <tr><td>9A</td><td>$150.000</td><td>$68.000</td><td>$218.000</td><td>$232.000</td></tr>
         </tbody>
     </table>
 
     <script>
         let equipos = [
-            { nombre: "9A", puntaje: 15, golesFavor: 29, golesContra: 22 },
-            { nombre: "9B", puntaje: 10, golesFavor: 24, golesContra: 14 },
-            { nombre: "9C", puntaje: 7, golesFavor: 29, golesContra: 56 },
-            { nombre: "10A", puntaje: 7, golesFavor: 17, golesContra: 25 },
-            { nombre: "10B", puntaje: 18, golesFavor: 47, golesContra: 35 },
-            { nombre: "10C", puntaje: 14, golesFavor: 37, golesContra: 52 },
-            { nombre: "11A", puntaje: 26, golesFavor: 54, golesContra: 29 },
-            { nombre: "11B", puntaje: 7, golesFavor: 26, golesContra: 32 },
-            { nombre: "Profesoras", puntaje: 4, golesFavor: 9, golesContra: 5 },
+            { nombre: "9A", puntaje: 139 },
+            { nombre: "9B", puntaje: 0, eliminado: true },
+            { nombre: "9C", puntaje: 143 },
+            { nombre: "10A", puntaje: 34 },
+            { nombre: "10B", puntaje: 185 },
+            { nombre: "10C", puntaje: 157 },
+            { nombre: "11A", puntaje: 202 },
+            { nombre: "11B", puntaje: 224 },
         ];
 
-        // Ordenamiento personalizado
-        equipos.sort((a, b) => {
-            // Primero ordena por puntaje (descendente)
-            if (b.puntaje !== a.puntaje) {
-                return b.puntaje - a.puntaje;
-            }
-            // Si el puntaje es igual, ordena por goles a favor (descendente)
-            if (b.golesFavor !== a.golesFavor) {
-                return b.golesFavor - a.golesFavor;
-            }
-            // Si puntaje y goles a favor son iguales, ordena por goles en contra (ascendente)
-            return a.golesContra - b.golesContra;
-        });
+        // Ordenamiento por puntaje descendente
+        equipos.sort((a, b) => b.puntaje - a.puntaje);
 
         let tbody = document.querySelector("#tablaGeneral tbody");
         equipos.forEach((equipo, index) => {
             let fila = document.createElement("tr");
             fila.innerHTML = `
                 <td>${index + 1}</td>
-                <td>${equipo.nombre}</td>
+                <td>${equipo.nombre}${equipo.eliminado ? " (Eliminado)" : ""}</td>
                 <td>${equipo.puntaje}</td>
-                <td>${equipo.golesFavor}</td>
-                <td>${equipo.golesContra}</td>
             `;
+            if (equipo.eliminado) {
+                fila.classList.add("eliminado");
+            }
             tbody.appendChild(fila);
         });
     </script>
